@@ -164,6 +164,7 @@ async def Init():
                     else:
                         #print(fr"File: {each[0]}"+"\n"+fr"Md5:        {md5}"+"\n"+fr"Stored Md5: {each[1]}"+"\n"+fr"MD5 Check FAILED!"+"\n\n")
                         print(fr"{each[1]}"+"\n"+fr"MD5 Check FAILED!"+"\n\n")
+                        errors.append(fr"File: {each[0]}"+"\n"+fr"Md5:        {md5}"+"\n"+fr"Stored Md5: {each[1]}"+"\n"+fr"MD5 Check FAILED!"+"\n\n")
     print(r"Done!")
     numpy.savetxt(fr"{wdir}\\md5check\Errors"+".txt", errors)
     print("errors saved")
